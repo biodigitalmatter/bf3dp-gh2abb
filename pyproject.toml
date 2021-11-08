@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/bf3dp_fab/_version.py"
+
+[tool.black]
+target-version = ['py27']
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "2.7"
+show_error_codes = true
+
+
+[[tool.mypy.overrides]]
+module = ["compas.*", "Rhino.*"]
+ignore_missing_imports = true
+
+[tool.pyright]
+include = ["src", "tests"]

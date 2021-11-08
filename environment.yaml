@@ -1,0 +1,10 @@
+name: bf3dp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - compas
+  - compas_convert
+  - compas_fab
+  - compas_rrc
+  - python[version='<3.9']
