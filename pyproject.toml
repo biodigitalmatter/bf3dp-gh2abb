@@ -35,7 +35,7 @@ Repository = "https://github.com/biodigitalmatter/bf3dp_fab"
 Issues = "https://github.com/biodigitalmatter/bf3dp_fab/issues"
 
 [project.optional-dependencies]
-dev = ["black", "ruff", "mypy<0.980", "pre-commit", "pytest"]
+dev = ["black", "ruff", "mypy<1.5", "pre-commit", "pytest"]
 
 [tool.setuptools_scm]
 write_to = "src/bf3dp_fab/_version.py"
