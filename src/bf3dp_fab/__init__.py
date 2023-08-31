@@ -1,3 +1,8 @@
+from pathlib import Path
+
+REPO_DIR = Path(__file__).parent.parent
+
+
 def _get_version():
     # from https://smarie.github.io/python-getversion/#package-versioning-best-practices
     # and setuptools_scm docs
