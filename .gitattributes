@@ -5,6 +5,6 @@
 *.yaml      eol=lf
 *.yml       eol=lf
 *.toml      eol=lf
-*.rst       eol=lf)
+*.rst       eol=lf
 
 *.ghx       eol=crlf

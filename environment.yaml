@@ -1,10 +1,13 @@
-name: bf3dp
+name: bf3dp_fab
 channels:
   - conda-forge
   - nodefaults
-dependencies:
+dependencies: # includes dev deps
   - compas_fab
   - compas_rrc
   - python>=3.8,<4
-platforms:
-  - win-64
+  - ruff
+  - black
+  - pre-commit
+  - mypy
+  - pytest
