@@ -3,7 +3,6 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import math
 
 import compas.datastructures
 from compas.data import Data
@@ -16,7 +15,7 @@ try:
     import typing
 
     if typing.TYPE_CHECKING:
-        from compas_fab.robots import Configuration
+        from compas_fab.robots import Configuration  # noqa: F401
 
 except ImportError:
     pass
@@ -50,8 +49,8 @@ class FabricationElement(Data):
         location_frame,  # type: cg.Frame
         entry_frame, # type: cg.Frame
         exit_frame,# type: cg.Frame
-        entry_trajectory=None,  # type: list[Configuration] | None
-        exit_trajectory=None,  # type: list[Configuration] | None
+        entry_trajectory=None,  # type: [Configuration] | None
+        exit_trajectory=None,  # type: [Configuration] | None
         placed_isotimestamp=None,  # type: int | None
         **kwargs  # fmt: skip
     ):
@@ -122,7 +121,7 @@ class FabricationElement(Data):
         new_instance = self.copy()
         new_instance.transform(xform)
         return new_instance
-    
+
     @staticmethod
     def rotate_frame_around_self(frame, rx, ry, rz):
         rot_constructor = cg.Rotation.from_axis_and_angle
